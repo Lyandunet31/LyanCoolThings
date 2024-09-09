@@ -1,0 +1,2 @@
+loadstring(game:HttpGet('https://sirius.menu/sirius'))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Lyandunet31/LyanCoolThings/main/Scripts/Fixeverythingonsynz"))()
