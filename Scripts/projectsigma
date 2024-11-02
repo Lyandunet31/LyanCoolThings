@@ -1,0 +1,1889 @@
+-- // GUI TO LUA \\ --
+
+-- // INSTANCES: 95 | SCRIPTS: 33 | MODULES: 0 \\ --
+
+local UI = {}
+
+-- // StarterGui.maingui \\ --
+UI["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"))
+UI["1"]["Name"] = [[maingui]]
+UI["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling
+
+-- // StarterGui.maingui.notif \\ --
+UI["2"] = Instance.new("ScreenGui", UI["1"])
+UI["2"]["Name"] = [[notif]]
+UI["2"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling
+UI["2"]["ResetOnSpawn"] = false
+
+-- // StarterGui.maingui.notif.Frame \\ --
+UI["3"] = Instance.new("Frame", UI["2"])
+UI["3"]["ZIndex"] = 1000
+UI["3"]["BorderSizePixel"] = 0
+UI["3"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["3"]["Size"] = UDim2.new(0, 100, 0, 100)
+UI["3"]["Position"] = UDim2.new(0.11812, 0, 0.5892, 0)
+UI["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+
+-- // StarterGui.maingui.notif.Frame.logo \\ --
+UI["4"] = Instance.new("ImageLabel", UI["3"])
+UI["4"]["ZIndex"] = 1000
+UI["4"]["BorderSizePixel"] = 0
+UI["4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["4"]["Image"] = [[rbxassetid://14854980658]]
+UI["4"]["Size"] = UDim2.new(0, 100, 0, 100)
+UI["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["4"]["Name"] = [[logo]]
+
+-- // StarterGui.maingui.notif.Frame.logo.UICorner \\ --
+UI["5"] = Instance.new("UICorner", UI["4"])
+UI["5"]["CornerRadius"] = UDim.new(0, 100)
+
+-- // StarterGui.maingui.notif.Frame.UICorner \\ --
+UI["6"] = Instance.new("UICorner", UI["3"])
+UI["6"]["CornerRadius"] = UDim.new(0, 100)
+
+-- // StarterGui.maingui.notif.Frame.orbitImage \\ --
+UI["7"] = Instance.new("ImageLabel", UI["3"])
+UI["7"]["ZIndex"] = 1000
+UI["7"]["BorderSizePixel"] = 0
+UI["7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["7"]["Image"] = [[rbxassetid://115983703055106]]
+UI["7"]["Size"] = UDim2.new(0, 30, 0, 27)
+UI["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["7"]["BackgroundTransparency"] = 1
+UI["7"]["Name"] = [[orbitImage]]
+UI["7"]["Position"] = UDim2.new(0.43, 0, 1.11, 0)
+
+-- // StarterGui.maingui.notif.Frame.orbitImage.UICorner \\ --
+UI["8"] = Instance.new("UICorner", UI["7"])
+UI["8"]["CornerRadius"] = UDim.new(0, 100)
+
+-- // StarterGui.maingui.notif.Frame.orbitImage.LocalScript \\ --
+UI["9"] = Instance.new("LocalScript", UI["7"])
+
+
+-- // StarterGui.maingui.notif.Frame.ring \\ --
+UI["a"] = Instance.new("ImageLabel", UI["3"])
+UI["a"]["ZIndex"] = 1000
+UI["a"]["BorderSizePixel"] = 0
+UI["a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["a"]["Image"] = [[rbxassetid://7102118272]]
+UI["a"]["Size"] = UDim2.new(0, 99, 0, 100)
+UI["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["a"]["BackgroundTransparency"] = 1
+UI["a"]["Name"] = [[ring]]
+
+-- // StarterGui.maingui.notif.Frame.ring.LocalScript \\ --
+UI["b"] = Instance.new("LocalScript", UI["a"])
+
+
+-- // StarterGui.maingui.notif.Frame.anim \\ --
+UI["c"] = Instance.new("LocalScript", UI["3"])
+UI["c"]["Name"] = [[anim]]
+
+-- // StarterGui.maingui.notif.Frame.about \\ --
+UI["d"] = Instance.new("Frame", UI["3"])
+UI["d"]["BorderSizePixel"] = 0
+UI["d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["d"]["Size"] = UDim2.new(0, 308, 0, 162)
+UI["d"]["Position"] = UDim2.new(1.44, 0, -0.31, 0)
+UI["d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["d"]["Name"] = [[about]]
+
+-- // StarterGui.maingui.notif.Frame.about.1 \\ --
+UI["e"] = Instance.new("TextLabel", UI["d"])
+UI["e"]["BorderSizePixel"] = 0
+UI["e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["e"]["TextSize"] = 14
+UI["e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+UI["e"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["e"]["Size"] = UDim2.new(0, 308, 0, 24)
+UI["e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["e"]["Text"] = [[Project  sigma made by susmic & @lyan_dunetuwu]]
+UI["e"]["Name"] = [[1]]
+
+-- // StarterGui.maingui.notif.Frame.about.2 \\ --
+UI["f"] = Instance.new("TextLabel", UI["d"])
+UI["f"]["TextWrapped"] = true
+UI["f"]["BorderSizePixel"] = 0
+UI["f"]["TextScaled"] = true
+UI["f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["f"]["TextSize"] = 14
+UI["f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+UI["f"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["f"]["Size"] = UDim2.new(0, 308, 0, 24)
+UI["f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["f"]["Text"] = [[ Intro UI Inspired by Project Ligma by Harkinian and Unverified.]]
+UI["f"]["Name"] = [[2]]
+UI["f"]["Position"] = UDim2.new(0, 0, 0.12183, 0)
+
+-- // StarterGui.maingui.notif.Frame.about.4 \\ --
+UI["10"] = Instance.new("TextLabel", UI["d"])
+UI["10"]["TextWrapped"] = true
+UI["10"]["BorderSizePixel"] = 0
+UI["10"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["10"]["TextSize"] = 14
+UI["10"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+UI["10"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["10"]["Size"] = UDim2.new(0, 308, 0, 24)
+UI["10"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["10"]["Text"] = [[Created by susmic &  @lyan_dunetuwu on 10/6/2024!]]
+UI["10"]["Name"] = [[4]]
+UI["10"]["Position"] = UDim2.new(0, 0, 0.42339, 0)
+
+-- // StarterGui.maingui.notif.Frame.about.5 \\ --
+UI["11"] = Instance.new("TextLabel", UI["d"])
+UI["11"]["TextWrapped"] = true
+UI["11"]["BorderSizePixel"] = 0
+UI["11"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["11"]["TextSize"] = 14
+UI["11"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+UI["11"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["11"]["Size"] = UDim2.new(0, 141, 0, 24)
+UI["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["11"]["Text"] = [[- susmic]]
+UI["11"]["Name"] = [[5]]
+UI["11"]["Position"] = UDim2.new(0.54221, 0, 0.56759, 0)
+
+-- // StarterGui.maingui.notif.Frame.about.alwaysontop \\ --
+UI["12"] = Instance.new("LocalScript", UI["d"])
+UI["12"]["Name"] = [[alwaysontop]]
+
+-- // StarterGui.maingui.notif.Frame.about.6 \\ --
+UI["13"] = Instance.new("TextLabel", UI["d"])
+UI["13"]["TextWrapped"] = true
+UI["13"]["BorderSizePixel"] = 0
+UI["13"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["13"]["TextSize"] = 14
+UI["13"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+UI["13"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["13"]["Size"] = UDim2.new(0, 297, 0, 24)
+UI["13"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["13"]["Text"] = [[P.S:  you can drag the gui by dragging the roblox logo!]]
+UI["13"]["Name"] = [[6]]
+UI["13"]["Position"] = UDim2.new(0.01623, 0, 0.72808, 0)
+
+-- // StarterGui.maingui.notif.Frame.orbitImage \\ --
+UI["14"] = Instance.new("ImageLabel", UI["3"])
+UI["14"]["ZIndex"] = 1000
+UI["14"]["BorderSizePixel"] = 0
+UI["14"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["14"]["Image"] = [[http://www.roblox.com/asset/?id=130764583571457]]
+UI["14"]["Size"] = UDim2.new(0, 30, 0, 27)
+UI["14"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["14"]["BackgroundTransparency"] = 1
+UI["14"]["Name"] = [[orbitImage]]
+UI["14"]["Position"] = UDim2.new(0.93, 0, 0.84, 0)
+
+-- // StarterGui.maingui.notif.Frame.orbitImage.UICorner \\ --
+UI["15"] = Instance.new("UICorner", UI["14"])
+UI["15"]["CornerRadius"] = UDim.new(0, 100)
+
+-- // StarterGui.maingui.notif.Frame.orbitImage.LocalScript \\ --
+UI["16"] = Instance.new("LocalScript", UI["14"])
+
+
+-- // StarterGui.maingui.notif.Frame.alwaysontop \\ --
+UI["17"] = Instance.new("LocalScript", UI["3"])
+UI["17"]["Name"] = [[alwaysontop]]
+
+-- // StarterGui.maingui.gui \\ --
+UI["18"] = Instance.new("ScreenGui", UI["1"])
+UI["18"]["Name"] = [[gui]]
+UI["18"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling
+UI["18"]["ResetOnSpawn"] = false
+
+-- // StarterGui.maingui.gui.projectsusmic \\ --
+UI["19"] = Instance.new("Frame", UI["18"])
+UI["19"]["BorderSizePixel"] = 0
+UI["19"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["19"]["Size"] = UDim2.new(0, 684, 0, 354)
+UI["19"]["Position"] = UDim2.new(0.59715, 0, 0.35848, 0)
+UI["19"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["19"]["Name"] = [[projectsusmic]]
+
+-- // StarterGui.maingui.gui.projectsusmic.Execute \\ --
+UI["1a"] = Instance.new("TextButton", UI["19"])
+UI["1a"]["BorderSizePixel"] = 0
+UI["1a"]["TextSize"] = 19
+UI["1a"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["1a"]["BackgroundColor3"] = Color3.fromRGB(153, 153, 153)
+UI["1a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["1a"]["Size"] = UDim2.new(0, 138, 0, 44)
+UI["1a"]["Name"] = [[Execute]]
+UI["1a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["1a"]["Text"] = [[EXECUTE]]
+UI["1a"]["Position"] = UDim2.new(0.22822, 0, 0.86351, 0)
+
+-- // StarterGui.maingui.gui.projectsusmic.Execute.LocalScript \\ --
+UI["1b"] = Instance.new("LocalScript", UI["1a"])
+
+
+-- // StarterGui.maingui.gui.projectsusmic.Clear \\ --
+UI["1c"] = Instance.new("TextButton", UI["19"])
+UI["1c"]["BorderSizePixel"] = 0
+UI["1c"]["TextSize"] = 19
+UI["1c"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["1c"]["BackgroundColor3"] = Color3.fromRGB(153, 153, 153)
+UI["1c"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["1c"]["Size"] = UDim2.new(0, 138, 0, 44)
+UI["1c"]["Name"] = [[Clear]]
+UI["1c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["1c"]["Text"] = [[CLEAR]]
+UI["1c"]["Position"] = UDim2.new(0.4561, 0, 0.86351, 0)
+
+-- // StarterGui.maingui.gui.projectsusmic.Clear.main \\ --
+UI["1d"] = Instance.new("LocalScript", UI["1c"])
+UI["1d"]["Name"] = [[main]]
+
+-- // StarterGui.maingui.gui.projectsusmic.Highlighter \\ --
+UI["1e"] = Instance.new("LocalScript", UI["19"])
+UI["1e"]["Name"] = [[Highlighter]]
+
+-- // StarterGui.maingui.gui.projectsusmic.Lines \\ --
+UI["1f"] = Instance.new("TextLabel", UI["19"])
+UI["1f"]["ZIndex"] = 4
+UI["1f"]["BorderSizePixel"] = 3
+UI["1f"]["TextYAlignment"] = Enum.TextYAlignment.Top
+UI["1f"]["BackgroundColor3"] = Color3.fromRGB(41, 41, 41)
+UI["1f"]["TextSize"] = 15
+UI["1f"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["1f"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["1f"]["Size"] = UDim2.new(-0.02087, 30, 0.70057, 0)
+UI["1f"]["ClipsDescendants"] = true
+UI["1f"]["BorderColor3"] = Color3.fromRGB(24, 24, 24)
+UI["1f"]["Text"] = [[1]]
+UI["1f"]["Name"] = [[Lines]]
+UI["1f"]["Position"] = UDim2.new(0.08505, 0, 0.12294, 0)
+
+-- // StarterGui.maingui.gui.projectsusmic.Source \\ --
+UI["20"] = Instance.new("TextBox", UI["19"])
+UI["20"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["20"]["PlaceholderColor3"] = Color3.fromRGB(205, 205, 205)
+UI["20"]["ZIndex"] = 4
+UI["20"]["BorderSizePixel"] = 3
+UI["20"]["TextXAlignment"] = Enum.TextXAlignment.Left
+UI["20"]["TextWrapped"] = true
+UI["20"]["TextSize"] = 15
+UI["20"]["Name"] = [[Source]]
+UI["20"]["TextYAlignment"] = Enum.TextYAlignment.Top
+UI["20"]["BackgroundColor3"] = Color3.fromRGB(41, 41, 41)
+UI["20"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["20"]["ClearTextOnFocus"] = false
+UI["20"]["ClipsDescendants"] = true
+UI["20"]["Size"] = UDim2.new(0, 536, 0, 248)
+UI["20"]["Position"] = UDim2.new(0.10863, 0, 0.12294, 0)
+UI["20"]["BorderColor3"] = Color3.fromRGB(24, 24, 24)
+UI["20"]["Text"] = [[print("project sigma on top")]]
+
+-- // StarterGui.maingui.gui.projectsusmic.Source.Tokens_ \\ --
+UI["21"] = Instance.new("TextLabel", UI["20"])
+UI["21"]["ZIndex"] = 5
+UI["21"]["TextXAlignment"] = Enum.TextXAlignment.Left
+UI["21"]["TextYAlignment"] = Enum.TextYAlignment.Top
+UI["21"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["21"]["TextSize"] = 15
+UI["21"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["21"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["21"]["BackgroundTransparency"] = 1
+UI["21"]["Size"] = UDim2.new(1, 0, 1, 0)
+UI["21"]["BorderColor3"] = Color3.fromRGB(28, 43, 54)
+UI["21"]["Text"] = [[]]
+UI["21"]["Name"] = [[Tokens_]]
+
+-- // StarterGui.maingui.gui.projectsusmic.Source.Strings_ \\ --
+UI["22"] = Instance.new("TextLabel", UI["20"])
+UI["22"]["ZIndex"] = 5
+UI["22"]["TextXAlignment"] = Enum.TextXAlignment.Left
+UI["22"]["TextYAlignment"] = Enum.TextYAlignment.Top
+UI["22"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["22"]["TextSize"] = 15
+UI["22"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["22"]["TextColor3"] = Color3.fromRGB(174, 242, 150)
+UI["22"]["BackgroundTransparency"] = 1
+UI["22"]["Size"] = UDim2.new(1, 0, 1, 0)
+UI["22"]["BorderColor3"] = Color3.fromRGB(28, 43, 54)
+UI["22"]["Text"] = [[]]
+UI["22"]["Name"] = [[Strings_]]
+
+-- // StarterGui.maingui.gui.projectsusmic.Source.RemoteHighlight_ \\ --
+UI["23"] = Instance.new("TextLabel", UI["20"])
+UI["23"]["ZIndex"] = 5
+UI["23"]["TextXAlignment"] = Enum.TextXAlignment.Left
+UI["23"]["TextYAlignment"] = Enum.TextYAlignment.Top
+UI["23"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["23"]["TextSize"] = 15
+UI["23"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["23"]["TextColor3"] = Color3.fromRGB(0, 145, 255)
+UI["23"]["BackgroundTransparency"] = 1
+UI["23"]["Size"] = UDim2.new(1, 0, 1, 0)
+UI["23"]["BorderColor3"] = Color3.fromRGB(28, 43, 54)
+UI["23"]["Text"] = [[]]
+UI["23"]["Name"] = [[RemoteHighlight_]]
+
+-- // StarterGui.maingui.gui.projectsusmic.Source.Numbers_ \\ --
+UI["24"] = Instance.new("TextLabel", UI["20"])
+UI["24"]["ZIndex"] = 4
+UI["24"]["TextXAlignment"] = Enum.TextXAlignment.Left
+UI["24"]["TextYAlignment"] = Enum.TextYAlignment.Top
+UI["24"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["24"]["TextSize"] = 15
+UI["24"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["24"]["TextColor3"] = Color3.fromRGB(255, 199, 0)
+UI["24"]["BackgroundTransparency"] = 1
+UI["24"]["Size"] = UDim2.new(1, 0, 1, 0)
+UI["24"]["BorderColor3"] = Color3.fromRGB(28, 43, 54)
+UI["24"]["Text"] = [[]]
+UI["24"]["Name"] = [[Numbers_]]
+
+-- // StarterGui.maingui.gui.projectsusmic.Source.Keywords_ \\ --
+UI["25"] = Instance.new("TextLabel", UI["20"])
+UI["25"]["ZIndex"] = 5
+UI["25"]["TextXAlignment"] = Enum.TextXAlignment.Left
+UI["25"]["TextYAlignment"] = Enum.TextYAlignment.Top
+UI["25"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["25"]["TextSize"] = 15
+UI["25"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["25"]["TextColor3"] = Color3.fromRGB(249, 110, 125)
+UI["25"]["BackgroundTransparency"] = 1
+UI["25"]["Size"] = UDim2.new(1, 0, 1, 0)
+UI["25"]["BorderColor3"] = Color3.fromRGB(28, 43, 54)
+UI["25"]["Text"] = [[]]
+UI["25"]["Name"] = [[Keywords_]]
+
+-- // StarterGui.maingui.gui.projectsusmic.Source.Globals_ \\ --
+UI["26"] = Instance.new("TextLabel", UI["20"])
+UI["26"]["ZIndex"] = 5
+UI["26"]["TextXAlignment"] = Enum.TextXAlignment.Left
+UI["26"]["TextYAlignment"] = Enum.TextYAlignment.Top
+UI["26"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["26"]["TextSize"] = 15
+UI["26"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["26"]["TextColor3"] = Color3.fromRGB(133, 215, 248)
+UI["26"]["BackgroundTransparency"] = 1
+UI["26"]["Size"] = UDim2.new(1, 0, 1, 0)
+UI["26"]["BorderColor3"] = Color3.fromRGB(28, 43, 54)
+UI["26"]["Text"] = [[]]
+UI["26"]["Name"] = [[Globals_]]
+
+-- // StarterGui.maingui.gui.projectsusmic.Source.Comments_ \\ --
+UI["27"] = Instance.new("TextLabel", UI["20"])
+UI["27"]["ZIndex"] = 5
+UI["27"]["TextXAlignment"] = Enum.TextXAlignment.Left
+UI["27"]["TextYAlignment"] = Enum.TextYAlignment.Top
+UI["27"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["27"]["TextSize"] = 15
+UI["27"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["27"]["TextColor3"] = Color3.fromRGB(60, 201, 60)
+UI["27"]["BackgroundTransparency"] = 1
+UI["27"]["Size"] = UDim2.new(1, 0, 1, 0)
+UI["27"]["BorderColor3"] = Color3.fromRGB(28, 43, 54)
+UI["27"]["Text"] = [[]]
+UI["27"]["Name"] = [[Comments_]]
+
+-- // StarterGui.maingui.gui.projectsusmic.Source.FastColoredTextbox \\ --
+UI["28"] = Instance.new("LocalScript", UI["20"])
+UI["28"]["Name"] = [[FastColoredTextbox]]
+
+-- // StarterGui.maingui.gui.projectsusmic.Title \\ --
+UI["29"] = Instance.new("TextLabel", UI["19"])
+UI["29"]["BorderSizePixel"] = 0
+UI["29"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["29"]["TextSize"] = 14
+UI["29"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+UI["29"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["29"]["BackgroundTransparency"] = 1
+UI["29"]["Size"] = UDim2.new(0, 298, 0, 17)
+UI["29"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["29"]["Text"] = [[Sigma]]
+UI["29"]["Name"] = [[Title]]
+UI["29"]["Position"] = UDim2.new(-0.13322, 0, 0.02375, 0)
+
+-- // StarterGui.maingui.gui.projectsusmic.Title.TextAnimationThing \\ --
+UI["2a"] = Instance.new("LocalScript", UI["29"])
+UI["2a"]["Name"] = [[TextAnimationThing]]
+
+-- // StarterGui.maingui.gui.projectsusmic.Dragify \\ --
+UI["2b"] = Instance.new("LocalScript", UI["19"])
+UI["2b"]["Name"] = [[Dragify]]
+
+-- // StarterGui.maingui.gui.projectsusmic.README \\ --
+UI["2c"] = Instance.new("LocalScript", UI["19"])
+UI["2c"]["Name"] = [[README]]
+
+-- // StarterGui.maingui.gui.projectsusmic.Inject \\ --
+UI["2d"] = Instance.new("TextButton", UI["19"])
+UI["2d"]["BorderSizePixel"] = 0
+UI["2d"]["TextSize"] = 19
+UI["2d"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["2d"]["BackgroundColor3"] = Color3.fromRGB(153, 153, 153)
+UI["2d"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["2d"]["Size"] = UDim2.new(0, 138, 0, 44)
+UI["2d"]["Name"] = [[Inject]]
+UI["2d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["2d"]["Text"] = [[INJECT]]
+UI["2d"]["Position"] = UDim2.new(0.00946, 0, 0.86496, 0)
+
+-- // StarterGui.maingui.gui.projectsusmic.Inject.LocalScript \\ --
+UI["2e"] = Instance.new("LocalScript", UI["2d"])
+
+
+-- // StarterGui.maingui.gui.projectsusmic.Inject.LocalScript.Value \\ --
+UI["2f"] = Instance.new("ObjectValue", UI["2e"])
+
+
+-- // StarterGui.maingui.gui.projectsusmic.Settings \\ --
+UI["30"] = Instance.new("TextButton", UI["19"])
+UI["30"]["BorderSizePixel"] = 0
+UI["30"]["TextSize"] = 19
+UI["30"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["30"]["BackgroundColor3"] = Color3.fromRGB(153, 153, 153)
+UI["30"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["30"]["Size"] = UDim2.new(0, 138, 0, 44)
+UI["30"]["Name"] = [[Settings]]
+UI["30"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["30"]["Text"] = [[SETTINGS]]
+UI["30"]["Position"] = UDim2.new(0.71555, 0, 0.86259, 0)
+
+-- // StarterGui.maingui.gui.projectsusmic.Settings.LocalScript \\ --
+UI["31"] = Instance.new("LocalScript", UI["30"])
+
+
+-- // StarterGui.maingui.gui.projectsusmic.alwaysontop \\ --
+UI["32"] = Instance.new("LocalScript", UI["19"])
+UI["32"]["Name"] = [[alwaysontop]]
+
+-- // StarterGui.maingui.gui.projectsusmic.ResizeControls \\ --
+UI["33"] = Instance.new("Frame", UI["19"])
+UI["33"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["33"]["Size"] = UDim2.new(1, 10, 1, 10)
+UI["33"]["Position"] = UDim2.new(0, -5, 0, -5)
+UI["33"]["Name"] = [[ResizeControls]]
+UI["33"]["BackgroundTransparency"] = 1
+
+-- // StarterGui.maingui.gui.projectsusmic.ResizeControls.North \\ --
+UI["34"] = Instance.new("TextButton", UI["33"])
+UI["34"]["BorderSizePixel"] = 0
+UI["34"]["AutoButtonColor"] = false
+UI["34"]["TextSize"] = 14
+UI["34"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["34"]["BackgroundColor3"] = Color3.fromRGB(71, 71, 71)
+UI["34"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["34"]["Size"] = UDim2.new(1, -10, 0, 5)
+UI["34"]["BackgroundTransparency"] = 1
+UI["34"]["Name"] = [[North]]
+UI["34"]["Text"] = [[]]
+UI["34"]["Position"] = UDim2.new(0, 5, 0, 0)
+
+-- // StarterGui.maingui.gui.projectsusmic.ResizeControls.South \\ --
+UI["35"] = Instance.new("TextButton", UI["33"])
+UI["35"]["BorderSizePixel"] = 0
+UI["35"]["AutoButtonColor"] = false
+UI["35"]["TextSize"] = 14
+UI["35"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["35"]["BackgroundColor3"] = Color3.fromRGB(71, 71, 71)
+UI["35"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["35"]["Size"] = UDim2.new(1, -10, 0, 5)
+UI["35"]["BackgroundTransparency"] = 1
+UI["35"]["Name"] = [[South]]
+UI["35"]["Text"] = [[]]
+UI["35"]["Position"] = UDim2.new(0, 5, 1, -5)
+
+-- // StarterGui.maingui.gui.projectsusmic.ResizeControls.NorthEast \\ --
+UI["36"] = Instance.new("TextButton", UI["33"])
+UI["36"]["BorderSizePixel"] = 0
+UI["36"]["AutoButtonColor"] = false
+UI["36"]["TextSize"] = 14
+UI["36"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["36"]["BackgroundColor3"] = Color3.fromRGB(71, 71, 71)
+UI["36"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["36"]["Size"] = UDim2.new(0, 5, 0, 5)
+UI["36"]["BackgroundTransparency"] = 1
+UI["36"]["Name"] = [[NorthEast]]
+UI["36"]["Text"] = [[]]
+UI["36"]["Position"] = UDim2.new(1, -5, 0, 0)
+
+-- // StarterGui.maingui.gui.projectsusmic.ResizeControls.East \\ --
+UI["37"] = Instance.new("TextButton", UI["33"])
+UI["37"]["BorderSizePixel"] = 0
+UI["37"]["AutoButtonColor"] = false
+UI["37"]["TextSize"] = 14
+UI["37"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["37"]["BackgroundColor3"] = Color3.fromRGB(71, 71, 71)
+UI["37"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["37"]["Size"] = UDim2.new(0, 5, 1, -10)
+UI["37"]["BackgroundTransparency"] = 1
+UI["37"]["Name"] = [[East]]
+UI["37"]["Text"] = [[]]
+UI["37"]["Position"] = UDim2.new(1, -5, 0, 5)
+
+-- // StarterGui.maingui.gui.projectsusmic.ResizeControls.West \\ --
+UI["38"] = Instance.new("TextButton", UI["33"])
+UI["38"]["BorderSizePixel"] = 0
+UI["38"]["AutoButtonColor"] = false
+UI["38"]["TextSize"] = 14
+UI["38"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["38"]["BackgroundColor3"] = Color3.fromRGB(71, 71, 71)
+UI["38"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["38"]["Size"] = UDim2.new(0, 5, 1, -10)
+UI["38"]["BackgroundTransparency"] = 1
+UI["38"]["Name"] = [[West]]
+UI["38"]["Text"] = [[]]
+UI["38"]["Position"] = UDim2.new(0, 0, 0, 5)
+
+-- // StarterGui.maingui.gui.projectsusmic.ResizeControls.SouthEast \\ --
+UI["39"] = Instance.new("TextButton", UI["33"])
+UI["39"]["BorderSizePixel"] = 0
+UI["39"]["AutoButtonColor"] = false
+UI["39"]["TextSize"] = 14
+UI["39"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["39"]["BackgroundColor3"] = Color3.fromRGB(71, 71, 71)
+UI["39"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["39"]["Size"] = UDim2.new(0, 5, 0, 5)
+UI["39"]["BackgroundTransparency"] = 1
+UI["39"]["Name"] = [[SouthEast]]
+UI["39"]["Text"] = [[]]
+UI["39"]["Position"] = UDim2.new(1, -5, 1, -5)
+
+-- // StarterGui.maingui.gui.projectsusmic.ResizeControls.NorthWest \\ --
+UI["3a"] = Instance.new("TextButton", UI["33"])
+UI["3a"]["BorderSizePixel"] = 0
+UI["3a"]["AutoButtonColor"] = false
+UI["3a"]["TextSize"] = 14
+UI["3a"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["3a"]["BackgroundColor3"] = Color3.fromRGB(71, 71, 71)
+UI["3a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["3a"]["Size"] = UDim2.new(0, 5, 0, 5)
+UI["3a"]["BackgroundTransparency"] = 1
+UI["3a"]["Name"] = [[NorthWest]]
+UI["3a"]["Text"] = [[]]
+
+-- // StarterGui.maingui.gui.projectsusmic.ResizeControls.SouthWest \\ --
+UI["3b"] = Instance.new("TextButton", UI["33"])
+UI["3b"]["BorderSizePixel"] = 0
+UI["3b"]["AutoButtonColor"] = false
+UI["3b"]["TextSize"] = 14
+UI["3b"]["TextColor3"] = Color3.fromRGB(0, 0, 0)
+UI["3b"]["BackgroundColor3"] = Color3.fromRGB(71, 71, 71)
+UI["3b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["3b"]["Size"] = UDim2.new(0, 5, 0, 5)
+UI["3b"]["BackgroundTransparency"] = 1
+UI["3b"]["Name"] = [[SouthWest]]
+UI["3b"]["Text"] = [[]]
+UI["3b"]["Position"] = UDim2.new(0, 0, 1, -5)
+
+-- // StarterGui.maingui.gui.projectsusmic.logo \\ --
+UI["3c"] = Instance.new("ImageLabel", UI["19"])
+UI["3c"]["ZIndex"] = 1000
+UI["3c"]["BorderSizePixel"] = 0
+UI["3c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["3c"]["Image"] = [[rbxassetid://14854980658]]
+UI["3c"]["Size"] = UDim2.new(0, 24, 0, 29)
+UI["3c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["3c"]["Name"] = [[logo]]
+UI["3c"]["Position"] = UDim2.new(0.00974, 0, 0.01663, 0)
+
+-- // StarterGui.maingui.gui.projectsusmic.logo.UICorner \\ --
+UI["3d"] = Instance.new("UICorner", UI["3c"])
+UI["3d"]["CornerRadius"] = UDim.new(0, 100)
+
+-- // StarterGui.maingui.gui.projectsusmic.logo.UIAspectRatioConstraint \\ --
+UI["3e"] = Instance.new("UIAspectRatioConstraint", UI["3c"])
+
+
+-- // StarterGui.maingui.gui.projectsusmic.UIStroke \\ --
+UI["3f"] = Instance.new("UIStroke", UI["19"])
+
+
+-- // StarterGui.maingui.gui.creds \\ --
+UI["40"] = Instance.new("Frame", UI["18"])
+UI["40"]["Visible"] = false
+UI["40"]["BorderSizePixel"] = 0
+UI["40"]["BackgroundColor3"] = Color3.fromRGB(34, 34, 34)
+UI["40"]["Size"] = UDim2.new(0, 333, 0, 341)
+UI["40"]["Position"] = UDim2.new(0.62696, 0, 0.48166, 0)
+UI["40"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["40"]["Name"] = [[creds]]
+
+-- // StarterGui.maingui.gui.creds.1 \\ --
+UI["41"] = Instance.new("TextLabel", UI["40"])
+UI["41"]["TextWrapped"] = true
+UI["41"]["BorderSizePixel"] = 0
+UI["41"]["TextScaled"] = true
+UI["41"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["41"]["TextSize"] = 17
+UI["41"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["41"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["41"]["BackgroundTransparency"] = 1
+UI["41"]["Size"] = UDim2.new(0, 277, 0, 17)
+UI["41"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["41"]["Text"] = [[Project Sigma made possible by:]]
+UI["41"]["Name"] = [[1]]
+UI["41"]["Position"] = UDim2.new(0.08152, 0, 0.05572, 0)
+
+-- // StarterGui.maingui.gui.creds.1.TextAnimationThing \\ --
+UI["42"] = Instance.new("LocalScript", UI["41"])
+UI["42"]["Name"] = [[TextAnimationThing]]
+
+-- // StarterGui.maingui.gui.creds.3 \\ --
+UI["43"] = Instance.new("TextLabel", UI["40"])
+UI["43"]["TextWrapped"] = true
+UI["43"]["BorderSizePixel"] = 0
+UI["43"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["43"]["TextSize"] = 17
+UI["43"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["43"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["43"]["BackgroundTransparency"] = 1
+UI["43"]["Size"] = UDim2.new(0, 277, 0, 17)
+UI["43"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["43"]["Text"] = [[@lyan_dunetuwu]]
+UI["43"]["Name"] = [[3]]
+UI["43"]["Position"] = UDim2.new(0.08152, 0, 0.22581, 0)
+
+-- // StarterGui.maingui.gui.creds.3.TextAnimationThing \\ --
+UI["44"] = Instance.new("LocalScript", UI["43"])
+UI["44"]["Name"] = [[TextAnimationThing]]
+
+-- // StarterGui.maingui.gui.creds.2 \\ --
+UI["45"] = Instance.new("TextLabel", UI["40"])
+UI["45"]["TextWrapped"] = true
+UI["45"]["BorderSizePixel"] = 0
+UI["45"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["45"]["TextSize"] = 17
+UI["45"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["45"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["45"]["BackgroundTransparency"] = 1
+UI["45"]["Size"] = UDim2.new(0, 277, 0, 17)
+UI["45"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["45"]["Text"] = [[susmic]]
+UI["45"]["Name"] = [[2]]
+UI["45"]["Position"] = UDim2.new(0.08152, 0, 0.15543, 0)
+
+-- // StarterGui.maingui.gui.creds.2.TextAnimationThing \\ --
+UI["46"] = Instance.new("LocalScript", UI["45"])
+UI["46"]["Name"] = [[TextAnimationThing]]
+
+-- // StarterGui.maingui.gui.creds.4 \\ --
+UI["47"] = Instance.new("TextLabel", UI["40"])
+UI["47"]["TextWrapped"] = true
+UI["47"]["BorderSizePixel"] = 0
+UI["47"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["47"]["TextSize"] = 17
+UI["47"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["47"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["47"]["BackgroundTransparency"] = 1
+UI["47"]["Size"] = UDim2.new(0, 277, 0, 17)
+UI["47"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["47"]["Text"] = [[Scripting:]]
+UI["47"]["Name"] = [[4]]
+UI["47"]["Position"] = UDim2.new(0.08152, 0, 0.31672, 0)
+
+-- // StarterGui.maingui.gui.creds.4.TextAnimationThing \\ --
+UI["48"] = Instance.new("LocalScript", UI["47"])
+UI["48"]["Name"] = [[TextAnimationThing]]
+
+-- // StarterGui.maingui.gui.creds.5 \\ --
+UI["49"] = Instance.new("TextLabel", UI["40"])
+UI["49"]["TextWrapped"] = true
+UI["49"]["BorderSizePixel"] = 0
+UI["49"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["49"]["TextSize"] = 17
+UI["49"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["49"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["49"]["BackgroundTransparency"] = 1
+UI["49"]["Size"] = UDim2.new(0, 277, 0, 17)
+UI["49"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["49"]["Text"] = [[susmic]]
+UI["49"]["Name"] = [[5]]
+UI["49"]["Position"] = UDim2.new(0.08152, 0, 0.3871, 0)
+
+-- // StarterGui.maingui.gui.creds.5.TextAnimationThing \\ --
+UI["4a"] = Instance.new("LocalScript", UI["49"])
+UI["4a"]["Name"] = [[TextAnimationThing]]
+
+-- // StarterGui.maingui.gui.creds.6 \\ --
+UI["4b"] = Instance.new("TextLabel", UI["40"])
+UI["4b"]["TextWrapped"] = true
+UI["4b"]["BorderSizePixel"] = 0
+UI["4b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["4b"]["TextSize"] = 17
+UI["4b"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["4b"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["4b"]["BackgroundTransparency"] = 1
+UI["4b"]["Size"] = UDim2.new(0, 277, 0, 17)
+UI["4b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["4b"]["Text"] = [[@lyan_dunetuwu]]
+UI["4b"]["Name"] = [[6]]
+UI["4b"]["Position"] = UDim2.new(0.08152, 0, 0.45455, 0)
+
+-- // StarterGui.maingui.gui.creds.6.TextAnimationThing \\ --
+UI["4c"] = Instance.new("LocalScript", UI["4b"])
+UI["4c"]["Name"] = [[TextAnimationThing]]
+
+-- // StarterGui.maingui.gui.creds.7 \\ --
+UI["4d"] = Instance.new("TextLabel", UI["40"])
+UI["4d"]["TextWrapped"] = true
+UI["4d"]["BorderSizePixel"] = 0
+UI["4d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["4d"]["TextSize"] = 17
+UI["4d"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["4d"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["4d"]["BackgroundTransparency"] = 1
+UI["4d"]["Size"] = UDim2.new(0, 277, 0, 17)
+UI["4d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["4d"]["Text"] = [[Ui & Design:]]
+UI["4d"]["Name"] = [[7]]
+UI["4d"]["Position"] = UDim2.new(0.08152, 0, 0.54839, 0)
+
+-- // StarterGui.maingui.gui.creds.7.TextAnimationThing \\ --
+UI["4e"] = Instance.new("LocalScript", UI["4d"])
+UI["4e"]["Name"] = [[TextAnimationThing]]
+
+-- // StarterGui.maingui.gui.creds.8 \\ --
+UI["4f"] = Instance.new("TextLabel", UI["40"])
+UI["4f"]["TextWrapped"] = true
+UI["4f"]["BorderSizePixel"] = 0
+UI["4f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["4f"]["TextSize"] = 17
+UI["4f"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["4f"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["4f"]["BackgroundTransparency"] = 1
+UI["4f"]["Size"] = UDim2.new(0, 277, 0, 17)
+UI["4f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["4f"]["Text"] = [[susmic]]
+UI["4f"]["Name"] = [[8]]
+UI["4f"]["Position"] = UDim2.new(0.08152, 0, 0.60997, 0)
+
+-- // StarterGui.maingui.gui.creds.8.TextAnimationThing \\ --
+UI["50"] = Instance.new("LocalScript", UI["4f"])
+UI["50"]["Name"] = [[TextAnimationThing]]
+
+-- // StarterGui.maingui.gui.creds.9 \\ --
+UI["51"] = Instance.new("TextLabel", UI["40"])
+UI["51"]["TextWrapped"] = true
+UI["51"]["BorderSizePixel"] = 0
+UI["51"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["51"]["TextSize"] = 17
+UI["51"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["51"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["51"]["BackgroundTransparency"] = 1
+UI["51"]["Size"] = UDim2.new(0, 277, 0, 17)
+UI["51"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["51"]["Text"] = [[@lyan_dunetuwu]]
+UI["51"]["Name"] = [[9]]
+UI["51"]["Position"] = UDim2.new(0.08152, 0, 0.68328, 0)
+
+-- // StarterGui.maingui.gui.creds.9.TextAnimationThing \\ --
+UI["52"] = Instance.new("LocalScript", UI["51"])
+UI["52"]["Name"] = [[TextAnimationThing]]
+
+-- // StarterGui.maingui.gui.creds.Dragify \\ --
+UI["53"] = Instance.new("LocalScript", UI["40"])
+UI["53"]["Name"] = [[Dragify]]
+
+-- // StarterGui.maingui.gui.creds.alwaysontop \\ --
+UI["54"] = Instance.new("LocalScript", UI["40"])
+UI["54"]["Name"] = [[alwaysontop]]
+
+-- // StarterGui.maingui.gui.doom \\ --
+UI["55"] = Instance.new("Frame", UI["18"])
+UI["55"]["Visible"] = false
+UI["55"]["BorderSizePixel"] = 0
+UI["55"]["BackgroundColor3"] = Color3.fromRGB(35, 35, 35)
+UI["55"]["Size"] = UDim2.new(0, 174, 0, 155)
+UI["55"]["Position"] = UDim2.new(0.55997, 0, 0.11125, 0)
+UI["55"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["55"]["Name"] = [[doom]]
+
+-- // StarterGui.maingui.gui.doom.Title \\ --
+UI["56"] = Instance.new("TextLabel", UI["55"])
+UI["56"]["BorderSizePixel"] = 0
+UI["56"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["56"]["TextSize"] = 14
+UI["56"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["56"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["56"]["BackgroundTransparency"] = 1
+UI["56"]["Size"] = UDim2.new(0, 123, 0, 17)
+UI["56"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["56"]["Text"] = [[Project Sigma]]
+UI["56"]["Name"] = [[Title]]
+UI["56"]["Position"] = UDim2.new(0.14693, 0, 0, 0)
+
+-- // StarterGui.maingui.gui.doom.Title.TextAnimationThing \\ --
+UI["57"] = Instance.new("LocalScript", UI["56"])
+UI["57"]["Name"] = [[TextAnimationThing]]
+
+-- // StarterGui.maingui.gui.doom.creditstextlabel \\ --
+UI["58"] = Instance.new("TextLabel", UI["55"])
+UI["58"]["BorderSizePixel"] = 0
+UI["58"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255)
+UI["58"]["TextSize"] = 17
+UI["58"]["FontFace"] = Font.new([[rbxasset://fonts/families/Inconsolata.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["58"]["TextColor3"] = Color3.fromRGB(255, 255, 255)
+UI["58"]["BackgroundTransparency"] = 1
+UI["58"]["Size"] = UDim2.new(0, 138, 0, 17)
+UI["58"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["58"]["Text"] = [[Credits]]
+UI["58"]["Name"] = [[creditstextlabel]]
+UI["58"]["Position"] = UDim2.new(-0.11559, 0, 0.18013, 0)
+
+-- // StarterGui.maingui.gui.doom.creditstextlabel.TextAnimationThing \\ --
+UI["59"] = Instance.new("LocalScript", UI["58"])
+UI["59"]["Name"] = [[TextAnimationThing]]
+
+-- // StarterGui.maingui.gui.doom.TextButton \\ --
+UI["5a"] = Instance.new("TextButton", UI["55"])
+UI["5a"]["BorderSizePixel"] = 0
+UI["5a"]["TextSize"] = 22
+UI["5a"]["TextColor3"] = Color3.fromRGB(255, 0, 5)
+UI["5a"]["BackgroundColor3"] = Color3.fromRGB(35, 35, 35)
+UI["5a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["5a"]["Size"] = UDim2.new(0, 45, 0, 25)
+UI["5a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["5a"]["Text"] = [[off]]
+UI["5a"]["Position"] = UDim2.new(0.58482, 0, 0.15181, 0)
+
+-- // StarterGui.maingui.gui.doom.TextButton.LocalScript \\ --
+UI["5b"] = Instance.new("LocalScript", UI["5a"])
+
+
+-- // StarterGui.maingui.gui.doom.Dragify \\ --
+UI["5c"] = Instance.new("LocalScript", UI["55"])
+UI["5c"]["Name"] = [[Dragify]]
+
+-- // StarterGui.maingui.gui.doom.TextButton \\ --
+UI["5d"] = Instance.new("TextButton", UI["55"])
+UI["5d"]["BorderSizePixel"] = 0
+UI["5d"]["TextSize"] = 22
+UI["5d"]["TextColor3"] = Color3.fromRGB(255, 0, 5)
+UI["5d"]["BackgroundColor3"] = Color3.fromRGB(35, 35, 35)
+UI["5d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal)
+UI["5d"]["Size"] = UDim2.new(0, 105, 0, 25)
+UI["5d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0)
+UI["5d"]["Text"] = [[DELETE GUI]]
+UI["5d"]["Position"] = UDim2.new(0.19402, 0, 0.73891, 0)
+
+-- // StarterGui.maingui.gui.doom.TextButton.LocalScript \\ --
+UI["5e"] = Instance.new("LocalScript", UI["5d"])
+
+
+-- // StarterGui.maingui.gui.doom.alwaysontop \\ --
+UI["5f"] = Instance.new("LocalScript", UI["55"])
+UI["5f"]["Name"] = [[alwaysontop]]
+
+-- // StarterGui.maingui.notif.Frame.orbitImage.LocalScript \\ --
+local function SCRIPT_9()
+local script = UI["9"]
+	local imageLabel = script.Parent
+	local frame = imageLabel.Parent
+	
+	local orbitRadius = 80
+	local orbitSpeed = 0.5
+	
+	local runService = game:GetService("RunService")
+	
+	runService.RenderStepped:Connect(function()
+		local centerX = frame.AbsolutePosition.X + frame.AbsoluteSize.X / 2
+		local centerY = frame.AbsolutePosition.Y + frame.AbsoluteSize.Y / 2
+	
+		local time = tick() * orbitSpeed
+	
+		local newX = centerX + math.cos(time) * orbitRadius - imageLabel.AbsoluteSize.X / 2
+		local newY = centerY + math.sin(time) * orbitRadius - imageLabel.AbsoluteSize.Y / 2
+	
+		imageLabel.Position = UDim2.fromOffset(newX - frame.AbsolutePosition.X, newY - frame.AbsolutePosition.Y)
+	end)
+	
+end
+task.spawn(SCRIPT_9)
+-- // StarterGui.maingui.notif.Frame.ring.LocalScript \\ --
+local function SCRIPT_b()
+local script = UI["b"]
+	local image = script.Parent
+	local rotationSpeed = 0.5
+	
+	while true do
+		image.Rotation = image.Rotation + rotationSpeed
+		wait(0.01)
+	end
+	
+end
+task.spawn(SCRIPT_b)
+-- // StarterGui.maingui.notif.Frame.anim \\ --
+local function SCRIPT_c()
+local script = UI["c"]
+	-- this is the notification animation script
+	-- yes i used tweenservice
+	
+	local frame = script.Parent
+	local tweenService = game:GetService("TweenService")
+	local about = frame:WaitForChild("about")
+	
+	local startPosition = UDim2.new(-1, 0, 0.5, -frame.Size.Y.Offset / 2)
+	local midPosition = UDim2.new(0.5, -frame.Size.X.Offset / 2, 0.5, -frame.Size.Y.Offset / 2)
+	local endPosition = UDim2.new(0, 60, 1, -frame.Size.Y.Offset - 100)
+	
+	about.Visible = false
+	
+	frame.Position = startPosition
+	
+	local function slideTo(position, duration)
+		local tweenInfo = TweenInfo.new(duration, Enum.EasingStyle.Linear, Enum.EasingDirection.Out)
+		local tween = tweenService:Create(frame, tweenInfo, {Position = position})
+		tween:Play()
+		tween.Completed:Wait()
+	end
+	
+	slideTo(midPosition, 0.5)
+	wait(2)
+	slideTo(endPosition, 0.5)
+	
+	about.Visible = true
+	
+	local UIS = game:GetService("UserInputService")
+	
+	local function dragify(Frame)
+		local dragToggle = nil
+		local dragSpeed = 0
+		local dragInput = nil
+		local dragStart = nil
+		local dragPos = nil
+		local startPos
+	
+		local function updateInput(input)
+			local Delta = input.Position - dragStart
+			local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+			game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.25), {Position = Position}):Play()
+		end
+	
+		Frame.InputBegan:Connect(function(input)
+			if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+				dragToggle = true
+				dragStart = input.Position
+				startPos = Frame.Position
+				input.Changed:Connect(function()
+					if input.UserInputState == Enum.UserInputState.End then
+						dragToggle = false
+					end
+				end)
+			end
+		end)
+	
+		Frame.InputChanged:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+				dragInput = input
+			end
+		end)
+	
+		UIS.InputChanged:Connect(function(input)
+			if input == dragInput and dragToggle then
+				updateInput(input)
+			end
+		end)
+	end
+	
+	dragify(frame)
+	
+end
+task.spawn(SCRIPT_c)
+-- // StarterGui.maingui.notif.Frame.about.alwaysontop \\ --
+local function SCRIPT_12()
+local script = UI["12"]
+	local frame = script.Parent
+	frame.ZIndex = 255
+	
+end
+task.spawn(SCRIPT_12)
+-- // StarterGui.maingui.notif.Frame.orbitImage.LocalScript \\ --
+local function SCRIPT_16()
+local script = UI["16"]
+	local imageLabel = script.Parent
+	local frame = imageLabel.Parent
+	local orbitImage = frame:WaitForChild("orbitImage")
+	
+	local orbitRadius = 80
+	local orbitSpeed = 0.5
+	
+	local runService = game:GetService("RunService")
+	
+	runService.RenderStepped:Connect(function()
+		local centerX = frame.AbsolutePosition.X + frame.AbsoluteSize.X / 2
+		local centerY = frame.AbsolutePosition.Y + frame.AbsoluteSize.Y / 2
+	
+		local time = tick() * orbitSpeed
+	
+		local orbitX = centerX + math.cos(time) * orbitRadius
+		local orbitY = centerY + math.sin(time) * orbitRadius
+	
+		local newX = orbitX - 40 - imageLabel.AbsoluteSize.X / 2
+		local newY = orbitY - imageLabel.AbsoluteSize.Y / 2
+	
+		imageLabel.Position = UDim2.fromOffset(newX - frame.AbsolutePosition.X, newY - frame.AbsolutePosition.Y)
+	end)
+	
+end
+task.spawn(SCRIPT_16)
+-- // StarterGui.maingui.notif.Frame.alwaysontop \\ --
+local function SCRIPT_17()
+local script = UI["17"]
+	local frame = script.Parent
+	frame.ZIndex = 255
+	
+end
+task.spawn(SCRIPT_17)
+-- // StarterGui.maingui.gui.projectsusmic.Execute.LocalScript \\ --
+local function SCRIPT_1b()
+local script = UI["1b"]
+	
+	local mpz = script.Parent.Parent.Inject.LocalScript.Value
+	
+	script.Parent.MouseButton1Click:Connect(function()
+	    if mpz and mpz.Value then
+	        local succes, err = pcall(function()
+	            local JMp = script.Parent.Parent.Source.Text
+	            mpz.Value:FireServer(tostring(JMp))
+	        end)
+	        if succes then
+	            game.StarterGui:SetCore("SendNotification", {
+	                Title = "Project sigma",
+	                Text = "Executed!",
+	                Duration = 5
+	            })
+	        else
+	            game.StarterGui:SetCore("SendNotification", {
+	                Title = "Blud just got an error🙏💀",
+	                Text = err.." dumbass💀💀💀🙏🙏🙏🙏",
+	                Duration = 5
+	            })
+	        end
+	    else
+	        game.StarterGui:SetCore("SendNotification", {
+	            Title = "Not injected",
+	            Text = "Please press the inject button first.",
+	            Duration = 5
+	        })
+	    end
+	end)
+	
+end
+task.spawn(SCRIPT_1b)
+-- // StarterGui.maingui.gui.projectsusmic.Clear.main \\ --
+local function SCRIPT_1d()
+local script = UI["1d"]
+	local box = script.Parent.Parent:WaitForChild("Source")
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		box.Text = ""
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Project Susmic", 
+			Text = "Successfully cleared textbox!", 
+			Button1 = "okay", 
+			Duration = 5, 
+			Icon = "rbxassetid://5430597512"
+		})
+	end)
+	
+	
+end
+task.spawn(SCRIPT_1d)
+-- // StarterGui.maingui.gui.projectsusmic.Highlighter \\ --
+local function SCRIPT_1e()
+local script = UI["1e"]
+	-- Function to reverse a string
+	local function reverseString(str)
+		return str:reverse()
+	end
+	
+	-- Reversed Lua keywords and global environment variables
+	local lua_keywords_reversed = {"dna", "kaerb", "od", "esle", "fiesle", "dne", "eslaf", "rof", "noitcnuf", "otog", "fi", "ni", "lacol", "lin", "ton", "ro", "taeper", "nruter", "neht", "eurt", "litnu", "elihw"}
+	local global_env_reversed = {"elbatemwarteg", "emag", "ecapskrow", "tpircs", "htam", "gnirts", "elbat", "tnirp", "tiaw", "roloCkcirB", "3roloC", "txen", "sriap", "sriapi", "tceles", "kcapnu", "ecnatnI", "2rotceV", "3rotceV", "emarfC", "yaR", "2miDU", "munE", "tressa", "rorrE", "nraw", "kcit", "gnirtsdaol", "G_", "derahs", "vnefteg", "vneftes", "yxorperw", "elbatemtes", "elbatemteg", "so", "gubed", "llacp", "llacy", "llacx", "lauqewar", "teswar", "tegwar", "rebmunot", "gnirtsot", "epyt", "fopuot", "NOISREV_", "enituoroc", "yaled", "eriuqer", "nawps", "yrarbiLdaoL", "sgnittes", "stats", "emit", "sgnittesresU", "noisrev", "seixA", "ecneuqeSroloC", "secaF", "tniopeyKecneuqeSroloC", "egnaRrebmuN", "ecneuqeSrebmuN", "tniopeyKecneuqeSrebmuN", "ofnigc", "emitlepsa", "egarbagtcelloc", "seititreporlacisyhP", "tceR", "3noigeR", "61tni3noigeR", "miDU", "61tni2rotceV", "61tni3rotceV"}
+	
+	-- Reverse the reversed keywords and global environment variables back to their original form
+	local lua_keywords = {}
+	for i, v in ipairs(lua_keywords_reversed) do
+		table.insert(lua_keywords, reverseString(v))
+	end
+	
+	local global_env = {}
+	for i, v in ipairs(global_env_reversed) do
+		table.insert(global_env, reverseString(v))
+	end
+	
+	local Source = script.Parent.Source
+	local Lines = script.Parent.Lines
+	
+	local Highlight = function(string, keywords)
+		local K = {}
+		local S = string
+		local Token =
+			{
+				["="] = true,
+				["."] = true,
+				[","] = true,
+				["("] = true,
+				[")"] = true,
+				["["] = true,
+				["]"] = true,
+				["{"] = true,
+				["}"] = true,
+				[":"] = true,
+				["*"] = true,
+				["/"] = true,
+				["+"] = true,
+				["-"] = true,
+				["%"] = true,
+				[";"] = true,
+				["~"] = true
+			}
+		for i, v in pairs(keywords) do
+			K[v] = true
+		end
+		S = S:gsub(".", function(c)
+			if Token[c] ~= nil then
+				return "\32"
+			else
+				return c
+			end
+		end)
+		S = S:gsub("%S+", function(c)
+			if K[c] ~= nil then
+				return c
+			else
+				return (" "):rep(#c)
+			end
+		end)
+	
+		return S
+	end
+	
+	local hTokens = function(string)
+		local Token =
+			{
+				["="] = true,
+				["."] = true,
+				[","] = true,
+				["("] = true,
+				[")"] = true,
+				["["] = true,
+				["]"] = true,
+				["{"] = true,
+				["}"] = true,
+				[":"] = true,
+				["*"] = true,
+				["/"] = true,
+				["+"] = true,
+				["-"] = true,
+				["%"] = true,
+				[";"] = true,
+				["~"] = true
+			}
+		local A = ""
+		string:gsub(".", function(c)
+			if Token[c] ~= nil then
+				A = A .. c
+			elseif c == "\n" then
+				A = A .. "\n"
+			elseif c == "\t" then
+				A = A .. "\t"
+			else
+				A = A .. "\32"
+			end
+		end)
+	
+		return A
+	end
+	
+	local strings = function(string)
+		local highlight = ""
+		local quote = false
+		string:gsub(".", function(c)
+			if quote == false and c == "\"" then
+				quote = true
+			elseif quote == true and c == "\"" then
+				quote = false
+			end
+			if quote == false and c == "\"" then
+				highlight = highlight .. "\""
+			elseif c == "\n" then
+				highlight = highlight .. "\n"
+			elseif c == "\t" then
+				highlight = highlight .. "\t"
+			elseif quote == true then
+				highlight = highlight .. c
+			elseif quote == false then
+				highlight = highlight .. "\32"
+			end
+		end)
+	
+		return highlight
+	end
+	
+	local comments = function(string)
+		local ret = ""
+		string:gsub("[^\r\n]+", function(c)
+			local comm = false
+			local i = 0
+			c:gsub(".", function(n)
+				i = i + 1
+				if c:sub(i, i + 1) == "--" then
+					comm = true
+				end
+				if comm == true then
+					ret = ret .. n
+				else
+					ret = ret .. "\32"
+				end
+			end)
+			ret = ret
+		end)
+	
+		return ret
+	end
+	
+	local numbers = function(string)
+		local A = ""
+		string:gsub(".", function(c)
+			if tonumber(c) ~= nil then
+				A = A .. c
+			elseif c == "\n" then
+				A = A .. "\n"
+			elseif c == "\t" then
+				A = A .. "\t"
+			else
+				A = A .. "\32"
+			end
+		end)
+	
+		return A
+	end
+	
+	local highlight_source = function(type)
+		if type == "Text" then
+			Source.Text = Source.Text:gsub("\13", "")
+			Source.Text = Source.Text:gsub("\t", "      ")
+			local s = Source.Text
+			Source.Keywords_.Text = Highlight(s, lua_keywords)
+			Source.Globals_.Text = Highlight(s, global_env)
+			Source.RemoteHighlight_.Text = Highlight(s, {"reverSeriF", "revreserifer", "reverSekovnI", "reverSekiovni"})
+			Source.Tokens_.Text = hTokens(s)
+			Source.Numbers_.Text = numbers(s)
+			Source.Strings_.Text = strings(s)
+			local lin = 1
+			s:gsub("\n", function()
+				lin = lin + 1
+			end)
+			Lines.Text = ""
+			for i = 1, lin do
+				Lines.Text = Lines.Text .. i .. "\n"
+			end
+		end
+	end
+	
+	highlight_source("Text")
+	
+	Source.Changed:Connect(highlight_source)
+	
+end
+task.spawn(SCRIPT_1e)
+-- // StarterGui.maingui.gui.projectsusmic.Source.FastColoredTextbox \\ --
+local function SCRIPT_28()
+local script = UI["28"]
+	local textBox = script.Parent
+	textBox.MultiLine = true
+	
+	textBox:GetPropertyChangedSignal("Text"):Connect(function()
+		local lines = string.split(textBox.Text, "\n")
+	
+		for i, line in ipairs(lines) do
+		end
+	
+		textBox.Text = table.concat(lines, "\n")
+	end)
+	
+	textBox.FocusLost:Connect(function(enterPressed)
+		if enterPressed then
+			textBox.Text = textBox.Text .. "\n"
+		end
+	end)
+	print("Project Susmic: Textbox Utilities Loaded!")
+end
+task.spawn(SCRIPT_28)
+-- // StarterGui.maingui.gui.projectsusmic.Title.TextAnimationThing \\ --
+local function SCRIPT_2a()
+local script = UI["2a"]
+	local textLabel = script.Parent
+	local fullText = textLabel.Text
+	local typingSpeed = 0.14
+	
+	local function typeText(label, text, speed)
+		label.Text = ""
+		for i = 1, #text do
+			label.Text = string.sub(text, 1, i)
+			wait(speed)
+		end
+	end
+	
+	typeText(textLabel, fullText, typingSpeed)
+	
+end
+task.spawn(SCRIPT_2a)
+-- // StarterGui.maingui.gui.projectsusmic.Dragify \\ --
+local function SCRIPT_2b()
+local script = UI["2b"]
+	local UIS = game:GetService("UserInputService")
+	function dragify(Frame)
+	    dragToggle = nil
+	    local dragSpeed = 0
+	    dragInput = nil
+	    dragStart = nil
+	    local dragPos = nil
+	    function updateInput(input)
+	        local Delta = input.Position - dragStart
+	        local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+	        game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.25), {Position = Position}):Play()
+	    end
+	    Frame.InputBegan:Connect(function(input)
+	        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+	            dragToggle = true
+	            dragStart = input.Position
+	            startPos = Frame.Position
+	            input.Changed:Connect(function()
+	                if input.UserInputState == Enum.UserInputState.End then
+	                    dragToggle = false
+	                end
+	            end)
+	        end
+	    end)
+	    Frame.InputChanged:Connect(function(input)
+	        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	            dragInput = input
+	        end
+	    end)
+	    game:GetService("UserInputService").InputChanged:Connect(function(input)
+	        if input == dragInput and dragToggle then
+	            updateInput(input)
+	        end
+	    end)
+	end
+	
+	dragify(script.Parent)
+end
+task.spawn(SCRIPT_2b)
+-- // StarterGui.maingui.gui.projectsusmic.README \\ --
+local function SCRIPT_2c()
+local script = UI["2c"]
+	print([[			Project Susmic [BACKDOOR] by susmic and @lyan_dunetuwu
+					
+					UI & Design: susmic and @lyan_dunetuwu
+					Scripting: susmic and @lyan_dunetuwu
+					
+							Created on 10/6/2024 by susmic
+							
+								Changelogs
+							
+					10/12/2024 added text animation for "Title"
+					10/12/2024 added text animation for console title 
+					10/12/2024 added TextWrapped property to "Source" textbox
+					10/12/2024 added typing and backspace animations to "ConsoleTitle" in consolegui
+					10/12/2024 updated loadstring from supporting only FiOne and Yueliang to-
+					supporting LuaK,LuaP,LuaU,LuaX,LuaY,LuaZ,Rerubi 
+					10/12/2024 fixed loadstring error
+					10/12/2024 updated fonts and error messages
+					10/14/2024 fixed RE script & button
+					10/14/2024 added more scripts to script hub
+					10/14/2024 remove multiple loadstrings ( causing issues )
+	
+	]])
+	
+	print("")
+	print("Project Sigma by susmic and @lyan_dunetuwu")
+	print("")
+	
+end
+task.spawn(SCRIPT_2c)
+-- // StarterGui.maingui.gui.projectsusmic.Inject.LocalScript \\ --
+local function SCRIPT_2e()
+local script = UI["2e"]
+	local button = script.Parent
+	
+	local function scanForRemoteEvents()
+		local startTime = tick()
+		local foundEvent = nil
+		local remoteEventPath = ""
+	
+		for _, service in ipairs(game:GetChildren()) do
+			for _, instance in ipairs(service:GetDescendants()) do
+				if instance:IsA("RemoteEvent") then
+					foundEvent = instance
+					remoteEventPath = instance:GetFullName() -- Get the full path of the RemoteEvent
+					break -- Exit inner loop to only notify about the first found RemoteEvent
+				end
+			end
+			if foundEvent then
+				break -- Exit outer loop once the first RemoteEvent is found
+			end
+		end
+	
+		if foundEvent then
+			local endTime = tick()
+			local timeTaken = string.format("%.2f", endTime - startTime)
+	
+			-- Create a BoolValue in Workspace
+			local boolValue = Instance.new("BoolValue")
+			boolValue.Name = "786g3r2= "..remoteEventPath
+			boolValue.Value = remoteEventPath
+	        boolValue.Parent = game.Workspace
+	        script.Value.Value = foundEvent
+			-- Send notification
+			game.StarterGui:SetCore("SendNotification", {
+				Title = "RemoteEvent Found =D",
+				Text = "Found RemoteEvent: " .. foundEvent.Name .. "\nTime Taken: " .. timeTaken .. " seconds",
+				Duration = 5
+			})
+		else
+			game.StarterGui:SetCore("SendNotification", {
+				Title = "No RemoteEvent Found D=",
+				Text = "No RemoteEvents were found in the game.",
+				Duration = 5
+			})
+		end
+	end
+	
+	button.MouseButton1Click:Connect(scanForRemoteEvents)
+	
+end
+task.spawn(SCRIPT_2e)
+-- // StarterGui.maingui.gui.projectsusmic.Settings.LocalScript \\ --
+local function SCRIPT_31()
+local script = UI["31"]
+	local settingsframe = script.Parent.Parent.Parent.doom
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if settingsframe.Visible then
+			settingsframe.Visible = false
+		else
+			settingsframe.Visible = true
+		end
+	end)
+	
+end
+task.spawn(SCRIPT_31)
+-- // StarterGui.maingui.gui.projectsusmic.alwaysontop \\ --
+local function SCRIPT_32()
+local script = UI["32"]
+	local frame = script.Parent
+	frame.ZIndex = 255
+	
+end
+task.spawn(SCRIPT_32)
+-- // StarterGui.maingui.gui.creds.1.TextAnimationThing \\ --
+local function SCRIPT_42()
+local script = UI["42"]
+	local textLabel = script.Parent
+	local fullText = textLabel.Text
+	local typingSpeed = 0.14
+	
+	local function typeText(label, text, speed)
+		label.Text = ""
+		for i = 1, #text do
+			label.Text = string.sub(text, 1, i)
+			wait(speed)
+		end
+	end
+	
+	typeText(textLabel, fullText, typingSpeed)
+	
+end
+task.spawn(SCRIPT_42)
+-- // StarterGui.maingui.gui.creds.3.TextAnimationThing \\ --
+local function SCRIPT_44()
+local script = UI["44"]
+	local textLabel = script.Parent
+	local fullText = textLabel.Text
+	local typingSpeed = 0.19
+	
+	local function typeText(label, text, speed)
+		label.Text = ""
+		for i = 1, #text do
+			label.Text = string.sub(text, 1, i)
+			wait(speed)
+		end
+	end
+	
+	typeText(textLabel, fullText, typingSpeed)
+	
+end
+task.spawn(SCRIPT_44)
+-- // StarterGui.maingui.gui.creds.2.TextAnimationThing \\ --
+local function SCRIPT_46()
+local script = UI["46"]
+	local textLabel = script.Parent
+	local fullText = textLabel.Text
+	local typingSpeed = 0.19
+	
+	local function typeText(label, text, speed)
+		label.Text = ""
+		for i = 1, #text do
+			label.Text = string.sub(text, 1, i)
+			wait(speed)
+		end
+	end
+	
+	typeText(textLabel, fullText, typingSpeed)
+	
+end
+task.spawn(SCRIPT_46)
+-- // StarterGui.maingui.gui.creds.4.TextAnimationThing \\ --
+local function SCRIPT_48()
+local script = UI["48"]
+	local textLabel = script.Parent
+	local fullText = textLabel.Text
+	local typingSpeed = 0.19
+	
+	local function typeText(label, text, speed)
+		label.Text = ""
+		for i = 1, #text do
+			label.Text = string.sub(text, 1, i)
+			wait(speed)
+		end
+	end
+	
+	typeText(textLabel, fullText, typingSpeed)
+	
+end
+task.spawn(SCRIPT_48)
+-- // StarterGui.maingui.gui.creds.5.TextAnimationThing \\ --
+local function SCRIPT_4a()
+local script = UI["4a"]
+	local textLabel = script.Parent
+	local fullText = textLabel.Text
+	local typingSpeed = 0.19
+	
+	local function typeText(label, text, speed)
+		label.Text = ""
+		for i = 1, #text do
+			label.Text = string.sub(text, 1, i)
+			wait(speed)
+		end
+	end
+	
+	typeText(textLabel, fullText, typingSpeed)
+	
+end
+task.spawn(SCRIPT_4a)
+-- // StarterGui.maingui.gui.creds.6.TextAnimationThing \\ --
+local function SCRIPT_4c()
+local script = UI["4c"]
+	local textLabel = script.Parent
+	local fullText = textLabel.Text
+	local typingSpeed = 0.19
+	
+	local function typeText(label, text, speed)
+		label.Text = ""
+		for i = 1, #text do
+			label.Text = string.sub(text, 1, i)
+			wait(speed)
+		end
+	end
+	
+	typeText(textLabel, fullText, typingSpeed)
+	
+end
+task.spawn(SCRIPT_4c)
+-- // StarterGui.maingui.gui.creds.7.TextAnimationThing \\ --
+local function SCRIPT_4e()
+local script = UI["4e"]
+	local textLabel = script.Parent
+	local fullText = textLabel.Text
+	local typingSpeed = 0.19
+	
+	local function typeText(label, text, speed)
+		label.Text = ""
+		for i = 1, #text do
+			label.Text = string.sub(text, 1, i)
+			wait(speed)
+		end
+	end
+	
+	typeText(textLabel, fullText, typingSpeed)
+	
+end
+task.spawn(SCRIPT_4e)
+-- // StarterGui.maingui.gui.creds.8.TextAnimationThing \\ --
+local function SCRIPT_50()
+local script = UI["50"]
+	local textLabel = script.Parent
+	local fullText = textLabel.Text
+	local typingSpeed = 0.19
+	
+	local function typeText(label, text, speed)
+		label.Text = ""
+		for i = 1, #text do
+			label.Text = string.sub(text, 1, i)
+			wait(speed)
+		end
+	end
+	
+	typeText(textLabel, fullText, typingSpeed)
+	
+end
+task.spawn(SCRIPT_50)
+-- // StarterGui.maingui.gui.creds.9.TextAnimationThing \\ --
+local function SCRIPT_52()
+local script = UI["52"]
+	local textLabel = script.Parent
+	local fullText = textLabel.Text
+	local typingSpeed = 0.19
+	
+	local function typeText(label, text, speed)
+		label.Text = ""
+		for i = 1, #text do
+			label.Text = string.sub(text, 1, i)
+			wait(speed)
+		end
+	end
+	
+	typeText(textLabel, fullText, typingSpeed)
+	
+end
+task.spawn(SCRIPT_52)
+-- // StarterGui.maingui.gui.creds.Dragify \\ --
+local function SCRIPT_53()
+local script = UI["53"]
+	local UIS = game:GetService("UserInputService")
+	function dragify(Frame)
+	    dragToggle = nil
+	    local dragSpeed = 0
+	    dragInput = nil
+	    dragStart = nil
+	    local dragPos = nil
+	    function updateInput(input)
+	        local Delta = input.Position - dragStart
+	        local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+	        game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.25), {Position = Position}):Play()
+	    end
+	    Frame.InputBegan:Connect(function(input)
+	        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+	            dragToggle = true
+	            dragStart = input.Position
+	            startPos = Frame.Position
+	            input.Changed:Connect(function()
+	                if input.UserInputState == Enum.UserInputState.End then
+	                    dragToggle = false
+	                end
+	            end)
+	        end
+	    end)
+	    Frame.InputChanged:Connect(function(input)
+	        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	            dragInput = input
+	        end
+	    end)
+	    game:GetService("UserInputService").InputChanged:Connect(function(input)
+	        if input == dragInput and dragToggle then
+	            updateInput(input)
+	        end
+	    end)
+	end
+	
+	dragify(script.Parent)
+end
+task.spawn(SCRIPT_53)
+-- // StarterGui.maingui.gui.creds.alwaysontop \\ --
+local function SCRIPT_54()
+local script = UI["54"]
+	local frame = script.Parent
+	frame.ZIndex = 255
+	
+end
+task.spawn(SCRIPT_54)
+-- // StarterGui.maingui.gui.doom.Title.TextAnimationThing \\ --
+local function SCRIPT_57()
+local script = UI["57"]
+	local textLabel = script.Parent
+	local fullText = textLabel.Text
+	local typingSpeed = 0.14
+	
+	local function typeText(label, text, speed)
+		label.Text = ""
+		for i = 1, #text do
+			label.Text = string.sub(text, 1, i)
+			wait(speed)
+		end
+	end
+	
+	typeText(textLabel, fullText, typingSpeed)
+	
+end
+task.spawn(SCRIPT_57)
+-- // StarterGui.maingui.gui.doom.creditstextlabel.TextAnimationThing \\ --
+local function SCRIPT_59()
+local script = UI["59"]
+	local textLabel = script.Parent
+	local fullText = textLabel.Text
+	local typingSpeed = 0.14
+	
+	local function typeText(label, text, speed)
+		label.Text = ""
+		for i = 1, #text do
+			label.Text = string.sub(text, 1, i)
+			wait(speed)
+		end
+	end
+	
+	typeText(textLabel, fullText, typingSpeed)
+	
+end
+task.spawn(SCRIPT_59)
+-- // StarterGui.maingui.gui.doom.TextButton.LocalScript \\ --
+local function SCRIPT_5b()
+local script = UI["5b"]
+	local creditsframe = script.Parent.Parent.Parent.creds
+	local textButton = script.Parent
+	local frame = textButton.Parent  -- Assuming the button is inside the frame
+	local typingSpeed = 0.19
+	local isOn = false  -- Initial state (OFF)
+	
+	local function typeText(label, text, speed, color)
+		label.Text = ""
+		label.TextColor3 = color
+		for i = 1, #text do
+			label.Text = string.sub(text, 1, i)
+			wait(speed)
+		end
+	end
+	
+	local function updateText()
+		if isOn then
+			creditsframe.Visible = true
+			typeText(textButton, "[ON]", typingSpeed, Color3.fromRGB(67, 255, 10))
+		else
+			creditsframe.Visible = false
+			typeText(textButton, "[OFF]", typingSpeed, Color3.fromRGB(255, 0, 4))
+		end
+	end
+	
+	-- Play the initial animation if the frame is visible
+	if frame.Visible then
+		updateText()
+	end
+	
+	-- Monitor frame visibility changes to play the animation
+	frame:GetPropertyChangedSignal("Visible"):Connect(function()
+		if frame.Visible then
+			updateText()
+		end
+	end)
+	
+	textButton.MouseButton1Click:Connect(function()
+		isOn = not isOn  -- Toggle the state
+		updateText()
+	end)
+	
+end
+task.spawn(SCRIPT_5b)
+-- // StarterGui.maingui.gui.doom.Dragify \\ --
+local function SCRIPT_5c()
+local script = UI["5c"]
+	local UIS = game:GetService("UserInputService")
+	function dragify(Frame)
+	    dragToggle = nil
+	    local dragSpeed = 0
+	    dragInput = nil
+	    dragStart = nil
+	    local dragPos = nil
+	    function updateInput(input)
+	        local Delta = input.Position - dragStart
+	        local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+	        game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.25), {Position = Position}):Play()
+	    end
+	    Frame.InputBegan:Connect(function(input)
+	        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+	            dragToggle = true
+	            dragStart = input.Position
+	            startPos = Frame.Position
+	            input.Changed:Connect(function()
+	                if input.UserInputState == Enum.UserInputState.End then
+	                    dragToggle = false
+	                end
+	            end)
+	        end
+	    end)
+	    Frame.InputChanged:Connect(function(input)
+	        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	            dragInput = input
+	        end
+	    end)
+	    game:GetService("UserInputService").InputChanged:Connect(function(input)
+	        if input == dragInput and dragToggle then
+	            updateInput(input)
+	        end
+	    end)
+	end
+	
+	dragify(script.Parent)
+end
+task.spawn(SCRIPT_5c)
+-- // StarterGui.maingui.gui.doom.TextButton.LocalScript \\ --
+local function SCRIPT_5e()
+local script = UI["5e"]
+	local textButton = script.Parent
+	local fullText = textButton.Text
+	local typingSpeed = 0.14
+	local gui = script.Parent.Parent.Parent.Parent.Parent.maingui
+	local inactivityTime = 5
+	local lastActivityTime = tick()
+	local isActive = false
+	
+	local function typeText(label, text, speed)
+		label.Text = ""
+		for i = 1, #text do
+			label.Text = string.sub(text, 1, i)
+			wait(speed)
+		end
+	end
+	
+	typeText(textButton, fullText, typingSpeed)
+	
+	local function resetInactivityTimer()
+		lastActivityTime = tick()
+	end
+	
+	textButton.MouseButton1Click:Connect(function()
+		if not isActive then
+			isActive = true
+			textButton.TextScaled = true
+			resetInactivityTimer()
+			typeText(textButton, "Are you sure?", typingSpeed)
+	
+			while isActive do
+				wait(1)
+				if tick() - lastActivityTime >= inactivityTime then
+					textButton.TextScaled = false
+					typeText(textButton, "Delete GUI", typingSpeed)
+					isActive = false
+				end
+			end
+		else
+			gui:Destroy()
+			game.StarterGui:SetCore("SendNotification", {
+				Title = "GUI Deleted",
+				Text = "Project Susmic GUI deleted; Execute again to show GUI.",
+				Image = "rbxassetid://15463734760",
+				Duration = 5
+			})
+		end
+	end)
+	
+end
+task.spawn(SCRIPT_5e)
+-- // StarterGui.maingui.gui.doom.alwaysontop \\ --
+local function SCRIPT_5f()
+local script = UI["5f"]
+	local frame = script.Parent
+	frame.ZIndex = 255
+	
+end
+task.spawn(SCRIPT_5f)
+
+return UI["1"], require;
