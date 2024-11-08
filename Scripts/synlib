@@ -1,0 +1,8 @@
+local synlib = {}
+
+function synlib.request(url)
+    return game:HttpGet(url)
+end
+
+
+return synlib
